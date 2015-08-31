@@ -1,0 +1,10 @@
+create table S4SA_SETTINGS
+(
+  code        VARCHAR2(255) not null,
+  meaning     VARCHAR2(2000),
+  description VARCHAR2(2000)
+)
+;
+alter table S4SA_SETTINGS
+  add constraint S4SA_SETTINGS_PK primary key (CODE);
+

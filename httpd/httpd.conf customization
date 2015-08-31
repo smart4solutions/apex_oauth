@@ -1,0 +1,37 @@
+# If you want to use your own server as a reverse proxy, you can use these directives to proxy the API endpoints
+# This is not a full list of used endpoints.
+
+RewriteEngine On
+ProxyVia On
+
+## proxy tbv linkedin
+ProxyRequests Off
+SSLProxyEngine On
+<Proxy *>
+  Order deny,allow
+  Allow from all
+</Proxy>
+
+############
+# LINKEDIN #
+############
+ProxyPass        /www.linkedin.com/     https://www.linkedin.com/
+ProxyPassReverse /www.linkedin.com/     https://www.linkedin.com/
+ProxyPass        /api.linkedin.com/     https://api.linkedin.com/
+ProxyPassReverse /api.linkedin.com/     https://api.linkedin.com/
+############
+#  GOOGLE  #
+############
+ProxyPass        /www.googleapis.com/   https://www.googleapis.com/
+ProxyPassReverse /www.googleapis.com/   https://www.googleapis.com/
+ProxyPass        /apps-apis.google.com/ https://apps-apis.google.com/
+ProxyPassReverse /apps-apis.google.com/ https://apps-apis.google.com/
+ProxyPass        /accounts.google.com/  https://accounts.google.com/
+ProxyPassReverse /accounts.google.com/  https://accounts.google.com/
+ProxyPass        /www.google.com/       https://www.google.com/
+ProxyPassReverse /www.google.com/       https://www.google.com/
+############
+# FACEBOOK #
+############
+ProxyPass        /graph.facebook.com/   https://graph.facebook.com/
+ProxyPassReverse /graph.facebook.com/   https://graph.facebook.com/
