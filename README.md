@@ -14,7 +14,7 @@ PL/SQL packages enabling Google, Linkedin and Facebook login for apex. Apex-oaut
 
 In my presentation at kscope 2015 I promised to release the oauth packages that will enable you to use Google, Facebook and Linked-in authentication in your own applications. I finally got around publishing them.
 
-Please leave your remarks at github, or consider to contribute to the development.
+Please leave your remarks at github, or consider to contribute to the development. You can also reach me at `r.martens at smart4solutions.nl`
 
 #documentation
 To enable your apex-application to use apex_oauth you need to register yourself at the appropriate sites:
