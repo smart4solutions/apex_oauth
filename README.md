@@ -2,8 +2,10 @@
 - [Documentation](#documentation)
 - [Download](#download)
 - [Installation](#installation)
+  - [Into an existing application](#install-into-an-existing-application)
+  - [Into a new application](#install-into-a-new-application)
 - [HTTPD configuration](#httpd)
-- [The settings table](#the)
+- [The settings table](#the-s4sa_settings-table)
 - [License](#license)
 
 
