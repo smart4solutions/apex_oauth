@@ -56,6 +56,7 @@ I have included the settings as I use them in my web-server setup. This prevents
 
 #the S4SA_SETTINGS table
 This table is the only table in use. It contains the settings for the API calls being made:
+
 Code | Description
 ---- | -----------
 S4SA_GRACE_PERIOD | This is the amount of seconds that a oauth session still has before redirecting to the login-page again
