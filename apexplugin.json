@@ -1,0 +1,33 @@
+{
+  "name" : "smart4solutions apex_oauth",
+  "version" : "0.1.0",
+  "description" : "PL/SQL packages enabling Google, Linkedin and Facebook login for apex",
+  "keywords" : ["oauth2", "google login", "facebook login", "linked-in login"],
+  "homepage" : "  ",
+  "bugs" : {
+    "url" : "https://github.com/smart4solutions/apex_oauth/issues",
+    "email" : "r.martens@smart4solutions.nl"
+  },
+  "license" : "MIT",
+  "author" : {
+    "name" : "Richard Martens",
+    "email" : "r.martens@smart4solutions.nl",
+    "url" : "http://richardmartens@blogspot.nl"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/smart4solutions/apex_oauth.git"
+  },
+  "oracle" : {
+    "versions" : ["11.2.0.1", "12.1.0.1"],
+    "apex" : {
+      "versions" : ["5.0.0", "4.2"],
+      "plugin" : {
+        "internalName" : "NL.S4S.OAUTH2",
+        "type" : "authentication",
+        "demo" : "http://dapex50.smart4apex.nl/ords/f?p=100",
+        "previewImage" : "https://raw.githubusercontent.com/smart4solutions/apex_oauth/master/preview.png"
+      }
+    }
+  }
+}
