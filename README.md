@@ -2,7 +2,7 @@
 - [Documentation](#documentation)
 - [Download](#download)
 - [Installation](#installation)
-  - [Into an existing application](##installing_existing)
+  - [Into an existing application](#installing_existing)
 - [Change Log](#change-log)
 - [License](#license)
 
