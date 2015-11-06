@@ -3,6 +3,7 @@
 - [Download](#download)
 - [Installation](#installation)
 - [HTTPD configuration](#httpd)
+- [The settings table](#the)
 - [License](#license)
 
 
