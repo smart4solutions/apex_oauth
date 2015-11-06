@@ -1,8 +1,6 @@
 --------------------------------------------------------
---  File created - vrijdag-november-06-2015   
+--  File created - november-06-2015   
 --------------------------------------------------------
-REM INSERTING into SEPAPEX.S4SA_SETTINGS
-SET DEFINE OFF;
 Insert into SEPAPEX.S4SA_SETTINGS (CODE,MEANING,DESCRIPTION) values ('S4SA_GRACE_PERIOD','300','This is the amount of seconds that a oauth session still has before redirecting to the login-page again');
 Insert into SEPAPEX.S4SA_SETTINGS (CODE,MEANING,DESCRIPTION) values ('S4SA_WALLET_PATH','file:/u01/app/oracle/product/11.2.0/xe/wallet_new/','The directory the oracle wallet is in when using https requests to the oauth provider');
 Insert into SEPAPEX.S4SA_SETTINGS (CODE,MEANING,DESCRIPTION) values ('S4SA_WALLET_PWD','secretpassword','the wallets password');
