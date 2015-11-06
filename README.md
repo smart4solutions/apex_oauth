@@ -2,7 +2,7 @@
 - [Documentation](#documentation)
 - [Download](#download)
 - [Installation](#installation)
-  - [Into an existing application](#installing_existing)
+  - [Into an existing application](#Install)
 - [Change Log](#change-log)
 - [License](#license)
 
@@ -28,7 +28,7 @@ The product consists of a number of database-objects:
 - sequences
 - etc...
 
-##installing_existing
+##Install into an existing application
 1. as sys: login into your database and execute the "grant_as_sysdba.sql" script. It will grant execute on the sys_http package to your parsing schema
 2. in apex, login into your workspace
 3. within the SQL Workshop:
