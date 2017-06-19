@@ -60,10 +60,10 @@ Please follow directions below to complete your installation.
 3. continue developing your application
 
 # httpd configuration
-It is highly advisable to use a everse proxy as described in my [blog](http://richardmartens.blogspot.nl/2015/07/making-https-webservice-requests-from.html title="blogspot").
+It is highly advisable to use a everse proxy as described in my [blog](http://richardmartens.blogspot.nl/2015/07/making-https-webservice-requests-from.html "blogspot").
 I have included the settings as I use them in my web-server setup. This prevents you from having to create an Oracle wallet. It also alows you to use Linked-in as the oauth provider. Since Linked-in uses a specific algorithm that is not supported below Oracle 11.2.0.3.
 
-# The S4SA_SETTINGS table
+# the S4SA_SETTINGS table
 This table is the only table in use. It contains the settings for the API calls being made:
 
 Code | Description
