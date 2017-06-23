@@ -1498,31 +1498,20 @@ begin
                   , p_method  => s4sa_oauth_pck.g_http_method_get_init
                    );
                    
-  if nullif (length (t_response), 0) is null then
+  if nullif (length (t_response), 0) is not null then
+    t_json := json(t_response);
+  else
     raise_application_error(-20000, 'No response received.');
   end if;
-  
-  if t_response like 'access_token=%' then
-    t_tbl_resp := apex_util.string_to_table(t_response, '&');
-    for rr in 1..t_tbl_resp.count loop
-      t_tbl_var := apex_util.string_to_table(t_tbl_resp(rr), '=');
-      case t_tbl_var(1)
-        when 'access_token'  then
-          po_access_token  := t_tbl_var(2);
-        when 'expires'       then
-          po_expires_in    := t_tbl_var(2);
-        when 'error'         then
-          po_error         := t_tbl_var(2);
-        when 'id_token'      then
-          po_id_token      := t_tbl_var(2);
-        when 'token_type'    then
-          po_token_type    := t_tbl_var(2);
-        else
-          null;
-      end case;
-    end loop;
+   
+  if t_json.exist('error') then
+    po_error := json_ext.get_string(t_json, 'error.message');
   else
-    po_error := t_response;
+    po_error        := null;
+    po_access_token := json_ext.get_string(t_json, 'access_token');
+    po_expires_in   := json_ext.get_number(t_json, 'expires_in'  );
+    po_id_token     := json_ext.get_string(t_json, 'id_token'    );
+    po_token_type   := json_ext.get_string(t_json, 'token_type'  );     
   end if;
 
 end get_token;
